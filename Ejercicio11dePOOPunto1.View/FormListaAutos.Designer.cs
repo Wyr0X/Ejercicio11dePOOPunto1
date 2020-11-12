@@ -54,9 +54,9 @@
             this.OrdenarAnioAntiguo = new System.Windows.Forms.ToolStripMenuItem();
             this.BotonFiltrar = new System.Windows.Forms.ToolStripDropDownButton();
             this.FiltrarMarca = new System.Windows.Forms.ToolStripMenuItem();
+            this.FiltrarColor = new System.Windows.Forms.ToolStripMenuItem();
             this.FiltrarCombustible = new System.Windows.Forms.ToolStripMenuItem();
             this.combustibleComboBox = new System.Windows.Forms.ToolStripComboBox();
-            this.FiltrarColor = new System.Windows.Forms.ToolStripMenuItem();
             this.BotonEstadisticas = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.toolStrip.SuspendLayout();
@@ -66,9 +66,10 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -80,6 +81,7 @@
             this.AnioDeFabricacion});
             this.dataGridView.GridColor = System.Drawing.Color.White;
             this.dataGridView.Location = new System.Drawing.Point(0, 62);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -276,14 +278,14 @@
             // OrdenarMarcaAZ
             // 
             this.OrdenarMarcaAZ.Name = "OrdenarMarcaAZ";
-            this.OrdenarMarcaAZ.Size = new System.Drawing.Size(180, 22);
+            this.OrdenarMarcaAZ.Size = new System.Drawing.Size(99, 22);
             this.OrdenarMarcaAZ.Text = "A - Z";
             this.OrdenarMarcaAZ.Click += new System.EventHandler(this.OrdenarMarcaAZ_Click);
             // 
             // OrdenarMarcaZA
             // 
             this.OrdenarMarcaZA.Name = "OrdenarMarcaZA";
-            this.OrdenarMarcaZA.Size = new System.Drawing.Size(180, 22);
+            this.OrdenarMarcaZA.Size = new System.Drawing.Size(99, 22);
             this.OrdenarMarcaZA.Text = "Z - A";
             this.OrdenarMarcaZA.Click += new System.EventHandler(this.OrdenarMarcaZA_Click);
             // 
@@ -334,16 +336,23 @@
             // FiltrarMarca
             // 
             this.FiltrarMarca.Name = "FiltrarMarca";
-            this.FiltrarMarca.Size = new System.Drawing.Size(180, 22);
+            this.FiltrarMarca.Size = new System.Drawing.Size(145, 22);
             this.FiltrarMarca.Text = "Marca";
             this.FiltrarMarca.Click += new System.EventHandler(this.FiltrarMarca_Click);
+            // 
+            // FiltrarColor
+            // 
+            this.FiltrarColor.Name = "FiltrarColor";
+            this.FiltrarColor.Size = new System.Drawing.Size(145, 22);
+            this.FiltrarColor.Text = "Color";
+            this.FiltrarColor.Click += new System.EventHandler(this.FiltrarColor_Click);
             // 
             // FiltrarCombustible
             // 
             this.FiltrarCombustible.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.combustibleComboBox});
             this.FiltrarCombustible.Name = "FiltrarCombustible";
-            this.FiltrarCombustible.Size = new System.Drawing.Size(180, 22);
+            this.FiltrarCombustible.Size = new System.Drawing.Size(145, 22);
             this.FiltrarCombustible.Text = "Combustible";
             // 
             // combustibleComboBox
@@ -352,13 +361,6 @@
             this.combustibleComboBox.Name = "combustibleComboBox";
             this.combustibleComboBox.Size = new System.Drawing.Size(121, 23);
             this.combustibleComboBox.SelectedIndexChanged += new System.EventHandler(this.CombustibleComboBox_SelectedIndexChanged);
-            // 
-            // FiltrarColor
-            // 
-            this.FiltrarColor.Name = "FiltrarColor";
-            this.FiltrarColor.Size = new System.Drawing.Size(180, 22);
-            this.FiltrarColor.Text = "Color";
-            this.FiltrarColor.Click += new System.EventHandler(this.FiltrarColor_Click);
             // 
             // BotonEstadisticas
             // 
