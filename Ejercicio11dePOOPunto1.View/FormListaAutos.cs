@@ -126,36 +126,42 @@ namespace Ejercicio11dePOOPunto1.View
         private void OrdenarPatenteAZ_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorPatente(false);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
         private void OrdenarPatenteZA_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorPatente(true);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
         private void OrdenarMarcaAZ_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorMarca(false);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
         private void OrdenarMarcaZA_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorMarca(true);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
         private void OrdenarAnioNuevo_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorAnio(true);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
         private void OrdenarAnioAntiguo_Click(object sender, EventArgs e)
         {
             listaActual = listaDeAutos.OrdenarPorAnio(false);
+            BotonRecargar.Enabled = true;
             MostrarListaEnGridView();
         }
 
